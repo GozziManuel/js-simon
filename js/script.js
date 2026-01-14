@@ -1,8 +1,9 @@
-let countDownStart = 5;
+let countDownStart = 2;
 const countDown = document.getElementById("countdown");
 const istruzioni = document.getElementById("instructions");
 const inputList = document.getElementById("answers-form");
 const numberlist = document.getElementById("numbers-list");
+const input = document.getElementsByClassName("form-control");
 
 function numberGenerator(quantity, min, max) {
   const numbers = [];
@@ -26,3 +27,8 @@ const counter = setInterval(() => {
     numberlist.classList.add("d-none");
   }
 }, 1000);
+inputList.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const classValue = input.value;
+  console.log(classValue);
+});
