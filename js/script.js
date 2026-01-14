@@ -23,5 +23,6 @@ const counter = setInterval(() => {
     countDown.style.display = "none";
     istruzioni.style.display = "none";
     inputList.classList.remove("d-none");
+    numberlist.classList.add("d-none");
   }
 }, 1000);
