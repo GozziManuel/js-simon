@@ -12,6 +12,7 @@ function numberGenerator(quantity, min, max) {
     numbers.push(randomNumber);
   }
   numberlist.innerHTML = `<li>${numbers.join("-")}</li>`;
+  console.log(numbers);
   return numbers;
 }
 numberGenerator(5, 1, 50);
@@ -31,10 +32,10 @@ inputList.addEventListener("submit", function (e) {
   e.preventDefault();
   const userNumbers = [];
   const number1 = parseInt(document.getElementById("number1").value);
-  const number2 = parseInt(document.getElementById("number1").value);
-  const number3 = parseInt(document.getElementById("number1").value);
-  const number4 = parseInt(document.getElementById("number1").value);
-  const number5 = parseInt(document.getElementById("number1").value);
+  const number2 = parseInt(document.getElementById("number2").value);
+  const number3 = parseInt(document.getElementById("number3").value);
+  const number4 = parseInt(document.getElementById("number4").value);
+  const number5 = parseInt(document.getElementById("number5").value);
   userNumbers.push(number1, number2, number3, number4, number5);
   console.log(userNumbers);
 });
