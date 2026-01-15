@@ -3,7 +3,7 @@ const countDown = document.getElementById("countdown");
 const istruzioni = document.getElementById("instructions");
 const inputList = document.getElementById("answers-form");
 const numberlist = document.getElementById("numbers-list");
-const input = document.getElementsByClassName("form-control");
+const message = document.getElementById("message");
 const numbers = [];
 
 function numberGenerator(quantity, min, max) {
@@ -43,4 +43,9 @@ inputList.addEventListener("submit", function (e) {
     return numbers.indexOf(element) >= 0;
   });
   console.log(validator);
+  if (validator == true) {
+    message.innerText = "hai vinto bravo!";
+  } else {
+    message.innerText = "hai perso riprova!";
+  }
 });
