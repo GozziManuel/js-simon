@@ -4,9 +4,9 @@ const istruzioni = document.getElementById("instructions");
 const inputList = document.getElementById("answers-form");
 const numberlist = document.getElementById("numbers-list");
 const input = document.getElementsByClassName("form-control");
+const numbers = [];
 
 function numberGenerator(quantity, min, max) {
-  const numbers = [];
   for (let i = 0; i < quantity; i++) {
     const randomNumber = Math.floor(Math.random() * max + min);
     numbers.push(randomNumber);
@@ -31,6 +31,7 @@ const counter = setInterval(() => {
 inputList.addEventListener("submit", function (e) {
   e.preventDefault();
   const userNumbers = [];
+
   const number1 = parseInt(document.getElementById("number1").value);
   const number2 = parseInt(document.getElementById("number2").value);
   const number3 = parseInt(document.getElementById("number3").value);
@@ -38,4 +39,8 @@ inputList.addEventListener("submit", function (e) {
   const number5 = parseInt(document.getElementById("number5").value);
   userNumbers.push(number1, number2, number3, number4, number5);
   console.log(userNumbers);
+  const validator = userNumbers.every(function (element) {
+    return numbers.indexOf(element) >= 0;
+  });
+  console.log(validator);
 });
