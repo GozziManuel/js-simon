@@ -29,6 +29,12 @@ const counter = setInterval(() => {
 }, 1000);
 inputList.addEventListener("submit", function (e) {
   e.preventDefault();
-  const classValue = input.value;
-  console.log(classValue);
+  const userNumbers = [];
+  const number1 = parseInt(document.getElementById("number1").value);
+  const number2 = parseInt(document.getElementById("number1").value);
+  const number3 = parseInt(document.getElementById("number1").value);
+  const number4 = parseInt(document.getElementById("number1").value);
+  const number5 = parseInt(document.getElementById("number1").value);
+  userNumbers.push(number1, number2, number3, number4, number5);
+  console.log(userNumbers);
 });
